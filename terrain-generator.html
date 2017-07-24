@@ -1,0 +1,162 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="./styles.css">
+	 	<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.15.0/lodash.min.js"></script>
+	 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	 	<script src="./anything.js" type="text/javascript"></script>
+	 	<script src="./view-constructor.js" type="text/javascript"></script>
+	</head>
+<body>
+
+<!-- navbar -->
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="">Terrain Generator</a>
+    </div>
+  </div>
+</nav>
+
+
+<div class="row">
+	<div class="">
+		<table class="terrain-table"></table>
+	</div>
+
+	<form id="terrainForm">
+
+		<div class="form-group col-xs-6 col-xs-offset-3">
+			<button type="submit" class="form-control">Reload</button>
+		</div>
+
+		<!-- Settings -->
+		<div class="row">
+			<div class="col-xs-8 col-xs-offset-2">
+
+				<!-- Water Settings-->
+				<div class="col-xs-3">
+					<div class="panel panel-info">
+						<div class="panel-heading water-header">Water</div>
+						<div class="panel-body input-group">
+							<label class="input-group-addon">Amount</label>
+							<input type="number" name="waterAmount" id="water-amount" class="form-control">
+						</div>
+						<div class="panel-body input-group">
+							<label class="input-group-addon">Pivots</label>
+							<input type="number" name="waterPivot" id="water-pivot" class="form-control">
+						</div>
+						<div class="panel-body input-group">
+							<label class="input-group-addon">Radius</label>
+							<input type="number" name="waterRadius" id="water-radius" class="form-control">
+						</div>
+					</div>
+				</div>
+
+				<!-- Soil Settings -->
+				<div class="col-xs-3">
+					<div class="panel panel-info">
+						<div class="panel-heading soil-header">Soil</div>
+						<div class="panel-body input-group">
+							<label class="input-group-addon">Amount</label>
+							<input type="number" name="soilAmount" id="soil-amount" class="form-control">
+						</div>
+						<div class="panel-body input-group">
+							<label class="input-group-addon">Pivots</label>
+							<input type="number" name="soilPivot" id="soil-pivot" class="form-control">
+						</div>
+						<div class="panel-body input-group">
+							<label class="input-group-addon">Radius</label>
+							<input type="number" name="soilRadius" id="soil-radius" class="form-control">
+						</div>
+					</div>
+				</div>
+
+				<!-- Stone Settings -->
+				<div class="col-xs-3">
+					<div class="panel panel-info">
+						<div class="panel-heading stone-header">Stone</div>
+						<div class="panel-body input-group">
+							<label class="input-group-addon">Amount</label>
+							<input type="number" name="stoneAmount" id="stone-amount" class="form-control">
+						</div>
+						<div class="panel-body input-group">
+							<label class="input-group-addon">Pivots</label>
+							<input type="number" name="stonePivot" id="stone-pivot" class="form-control">
+						</div>
+						<div class="panel-body input-group">
+							<label class="input-group-addon">Radius</label>
+							<input type="number" name="stoneRadius" id="stone-radius" class="form-control">
+						</div>
+					</div>
+				</div>
+
+				<!-- Forest Settings -->
+				<div class="col-xs-3">
+					<div class="panel panel-info">
+						<div class="panel-heading forest-header">Forest</div>
+						<div class="panel-body input-group">
+							<label class="input-group-addon">Amount</label>
+							<input type="number" name="forestAmount" id="forest-amount" class="form-control">
+						</div>
+						<div class="panel-body input-group">
+							<label class="input-group-addon">Pivots</label>
+							<input type="number" name="forestPivot" id="forest-pivot" class="form-control">
+						</div>
+						<div class="panel-body input-group">
+							<label class="input-group-addon">Radius</label>
+							<input type="number" name="forestRadius" id="forest-radius" class="form-control">
+						</div>
+					</div>
+				</div>
+
+				<!-- Structure Settings -->
+				<div class="col-xs-3">
+					<div class="panel panel-info">
+						<div class="panel-heading structure-header">Structure</div>
+						<div class="panel-body input-group">
+							<label class="input-group-addon">Amount</label>
+							<input type="number" name="structureAmount" id="structure-amount" class="form-control">
+						</div>
+						<div class="panel-body input-group">
+							<label class="input-group-addon">Pivots</label>
+							<input type="number" name="structurePivot" id="structure-pivot" class="form-control">
+						</div>
+						<div class="panel-body input-group">
+							<label class="input-group-addon">Radius</label>
+							<input type="number" name="structureRadius" id="structure-radius" class="form-control">
+						</div>
+					</div>
+				</div>
+
+				<!-- Size Settings-->
+				<div class="col-xs-3">
+					<div class="panel panel-info">
+						<div class="panel-heading">Wold Size</div>
+						<div class="panel-body input-group">
+							<input type="number" name="size" id="world-size" class="form-control">
+						</div>
+					</div>
+				</div>
+
+				<!-- Default Terrain Settings-->
+				<div class="col-xs-3">
+					<div class="panel panel-info">
+						<div class="panel-heading">Default Terrain</div>
+						<div class="panel-body input-group">
+							<select name="base" id="world-base" class="form-control">
+								<option value="water">Water</div>
+								<option value="soil">Soil</div>
+								<option value="forest">Forest</div>
+								<option value="stone">Stone</div>
+								<option value="Structure">Structure</div>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>
+
+</body>

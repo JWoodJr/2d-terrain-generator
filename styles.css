@@ -1,0 +1,85 @@
+
+body {
+	background: darkgray;
+}
+
+table {
+    border: 1px solid #CCC;
+    border-collapse: collapse;
+}
+
+label.input-group-addon {
+	min-width: 75px;
+}
+
+.world {
+	border: solid black 2px;
+}
+
+.terrain-table {
+	margin-left: auto;
+	margin-right:auto;
+	margin-bottom: 23px;
+	border: 4px double white;
+}
+
+.tile {
+	min-height: 10px;
+	height: 10px;
+	min-width: 10px;
+	width: 10px;
+	background: white;
+	border-width: 0;
+}
+
+.stone {
+	background: darkgray;
+}
+
+.stone-header {
+	background: linear-gradient(47deg, white, darkgray);;
+}
+
+.soil {
+	background: saddlebrown;
+}
+
+.soil-header {
+	background: linear-gradient(47deg, white, saddlebrown);;
+}
+
+.road {
+	background: gray;
+}
+
+.water {
+	background: blue;
+}
+
+.water-header {
+	background: linear-gradient(47deg, white, blue);;
+}
+
+.forest {
+	background: green;
+}
+
+.forest-header {
+	background: linear-gradient(47deg, white, green);;
+}
+
+.structure {
+	background: darkorange;
+}
+
+.structure-header {
+	background: linear-gradient(47deg, white, darkorange);;
+}
+
+.character {
+	background: green !important;
+}
+
+.water.soil {
+	// background: yellow;
+}
